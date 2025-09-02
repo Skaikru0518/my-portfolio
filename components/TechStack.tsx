@@ -4,7 +4,6 @@ import {
   SiNodedotjs,
   SiExpress,
   SiNestjs,
-  SiReact,
   SiNextdotjs,
   SiMysql,
   SiMongodb,
@@ -14,7 +13,6 @@ import {
 } from 'react-icons/si';
 import { TbBrandCSharp } from 'react-icons/tb';
 import { Code } from 'lucide-react';
-import { useTheme } from 'next-themes';
 
 const technologies = [
   // { name: 'React', icon: SiReact, color: '#61DBFB' },
@@ -96,7 +94,6 @@ const itemVariants = {
 };
 
 export default function TechStack() {
-  const { theme } = useTheme();
   return (
     <section id="tech-stack" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -125,7 +122,7 @@ export default function TechStack() {
           viewport={{ once: true, margin: '-50px' }}
           className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 gap-6"
         >
-          {technologies.map((tech, index) => (
+          {technologies.map((tech) => (
             <motion.div
               key={tech.name}
               variants={itemVariants}

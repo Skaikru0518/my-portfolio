@@ -77,8 +77,8 @@ export default function About() {
             {/* About text */}
             <div className="text-foreground/80 leading-relaxed space-y-4">
               <p>
-                I'm Péter, a motivated full-stack developer with 1.5 years of
-                daily professional experience. I focus on building modern,
+                I&apos;m Peter, a motivated full-stack developer with 1.5 years
+                of daily professional experience. I focus on building modern,
                 scalable web and desktop applications with clean, user-friendly
                 interfaces and robust back-end systems.
               </p>

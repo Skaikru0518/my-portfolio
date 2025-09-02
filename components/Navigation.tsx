@@ -39,7 +39,7 @@ export default function Navigation() {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  });
 
   useEffect(() => {
     document.documentElement.classList.toggle('light', !isDarkMode);

@@ -10,13 +10,13 @@ export const contact_info = [
   {
     icon: Github,
     label: 'GitHub',
-    value: 'https://github.com/Skaikru0518',
+    value: 'Skaikru0518',
     href: 'https://github.com/Skaikru0518',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: '',
-    href: '',
+    value: 'Péter Dobi',
+    href: 'https://www.linkedin.com/in/p%C3%A9ter-dobi-917347160/',
   },
 ];

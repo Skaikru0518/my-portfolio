@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { ArrowDown, Download, Mail } from 'lucide-react';
+import { ArrowDown, Mail } from 'lucide-react';
 import heroBackground from '@/components/assets/hero-background.jpg';
 import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
@@ -81,7 +81,7 @@ export default function Hero() {
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               <span className="block dark:text-foreground light:text-white/80 mb-2">
-                Hi, I'm
+                Hi, I&apos;m
               </span>
               <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                 Peter Dobi

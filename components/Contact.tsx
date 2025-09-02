@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Send, Phone, MapPin } from 'lucide-react';
+import { Mail, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -14,7 +14,6 @@ import {
   CardHeader,
   CardTitle,
 } from './ui/card';
-import { Label } from './ui/label';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -61,8 +60,8 @@ export default function Contact() {
             </h2>
           </div>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            Have a project in mind or just want to chat? I'd love to hear from
-            you!
+            Have a project in mind or just want to chat? I&apos;d love to hear
+            from you!
           </p>
         </motion.div>
 
@@ -80,8 +79,8 @@ export default function Contact() {
                   Send me a message
                 </CardTitle>
                 <CardDescription>
-                  Fill out the form below and I'll get back to you as soon as
-                  possible.
+                  Fill out the form below and I&apos;ll get back to you as soon
+                  as possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -175,11 +174,11 @@ export default function Contact() {
           >
             <div>
               <h3 className="text-2xl font-semibold text-foreground mb-6">
-                Let's connect
+                Let&lsquo;s connect
               </h3>
               <p className="text-foreground/70 leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, interesting
-                projects, or just having a chat about technology and
+                I&lsquo;m always open to discussing new opportunities,
+                interesting projects, or just having a chat about technology and
                 development.
               </p>
             </div>
