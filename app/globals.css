@@ -1,26 +1,227 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
+@custom-variant light (&:is(.light *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter);
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* 🌙 Navy Dark Theme (default = dark) */
+:root {
+  --radius: 0.75rem;
+
+  --background: hsl(222 84% 3%);
+  --foreground: hsl(213 27% 84%);
+
+  --card: hsl(217 33% 7%);
+  --card-foreground: hsl(213 27% 84%);
+
+  --popover: hsl(217 33% 7%);
+  --popover-foreground: hsl(213 27% 84%);
+
+  --primary: hsl(217 91% 60%);
+  --primary-foreground: hsl(222 84% 3%);
+
+  --secondary: hsl(217 19% 12%);
+  --secondary-foreground: hsl(213 27% 84%);
+
+  --muted: hsl(217 19% 12%);
+  --muted-foreground: hsl(215 25% 45%);
+
+  --accent: hsl(217 91% 60%);
+  --accent-foreground: hsl(222 84% 3%);
+
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(210 40% 98%);
+
+  --border: hsl(217 19% 12%);
+  --input: hsl(217 19% 12%);
+  --ring: hsl(217 91% 60%);
+
+  --chart-1: hsl(217 91% 60%);
+  --chart-2: hsl(16 185% 129);
+  --chart-3: hsl(245 158% 11);
+  --chart-4: hsl(239 68% 68);
+  --chart-5: hsl(168 85% 247);
+
+  --sidebar: hsl(217 33% 7%);
+  --sidebar-foreground: hsl(213 27% 84%);
+  --sidebar-primary: hsl(217 91% 60%);
+  --sidebar-primary-foreground: hsl(222 84% 3%);
+  --sidebar-accent: hsl(217 19% 12%);
+  --sidebar-accent-foreground: hsl(213 27% 84%);
+  --sidebar-border: hsl(217 19% 12%);
+  --sidebar-ring: hsl(217 91% 60%);
+
+  /* Gradients + shadows */
+  --gradient-primary: linear-gradient(135deg, hsl(222 84% 3%), hsl(217 33% 7%));
+  --gradient-accent: linear-gradient(
+    135deg,
+    hsl(217 91% 60%),
+    hsl(213 92% 72%)
+  );
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(222 84% 3%) 0%,
+    hsl(217 33% 7%) 50%,
+    hsl(217 91% 60% / 0.1) 100%
+  );
+  --shadow-navy: 0 10px 50px -12px hsl(217 91% 60% / 0.15);
+  --shadow-glow: 0 0 50px hsl(217 91% 60% / 0.2);
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.light {
+  --background: hsl(210 40% 98%);
+  --foreground: hsl(222 84% 5%);
+
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(222 84% 5%);
+
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(222 84% 5%);
+
+  --primary: hsl(217 91% 60%);
+  --primary-foreground: hsl(210 40% 98%);
+
+  --secondary: hsl(210 40% 96%);
+  --secondary-foreground: hsl(222 84% 5%);
+
+  --muted: hsl(210 40% 96%);
+  --muted-foreground: hsl(215 16% 47%);
+
+  --accent: hsl(217 91% 60%);
+  --accent-foreground: hsl(210 40% 98%);
+
+  --border: hsl(214 32% 91%);
+  --input: hsl(214 32% 91%);
+  --ring: hsl(217 91% 60%);
+
+  --sidebar: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(222 84% 5%);
+  --sidebar-primary: hsl(217 91% 60%);
+  --sidebar-primary-foreground: hsl(210 40% 98%);
+  --sidebar-accent: hsl(210 40% 96%);
+  --sidebar-accent-foreground: hsl(222 84% 5%);
+  --sidebar-border: hsl(214 32% 91%);
+  --sidebar-ring: hsl(217 91% 60%);
+
+  --gradient-primary: linear-gradient(135deg, hsl(210 40% 98%), hsl(0 0% 100%));
+  --gradient-accent: linear-gradient(
+    135deg,
+    hsl(217 91% 60%),
+    hsl(213 92% 72%)
+  );
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(210 40% 98%) 0%,
+    hsl(0 0% 100%) 50%,
+    hsl(217 91% 60% / 0.05) 100%
+  );
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+  .navy-shadow {
+    box-shadow: var(--shadow-navy);
+  }
+  .smooth-transition {
+    transition: var(--transition-smooth);
+  }
+  .bounce-transition {
+    transition: var(--transition-bounce);
+  }
+}
+
+/* app.css */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em hsl(var(--primary) / 0.7));
 }
