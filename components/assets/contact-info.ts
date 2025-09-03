@@ -4,8 +4,8 @@ export const contact_info = [
   {
     icon: Mail,
     label: 'Mail',
-    value: 'dante0518@gmail.com',
-    href: 'mailto:dante0518@gmail.com',
+    value: 'dobi.peter@proton.me',
+    href: 'mailto:dobi.peter@proton.me',
   },
   {
     icon: Github,

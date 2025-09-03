@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Peter Dobi - Full-Stack Developer Portfolio',
+  title: 'Péter Dobi - Full-Stack Developer Portfolio',
   description:
     'Portfolio of Peter Dobi, a motivated full-stack developer specializing in JavaScript, Node.js, Express, React, MySQL, and C#. Discover projects, skills, and contact information.',
   icons: {
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Peter Dobi - Full-Stack Developer Portfolio',
     description:
-      'Explore the projects and skills of Peter Dobi, a full-stack developer passionate about building modern, scalable applications.',
+      'Explore the projects and skills of Péter Dobi, a full-stack developer passionate about building modern, scalable applications.',
     url: 'https://skaikru-portfolio.vercel.app',
-    siteName: 'Peter Dobi Portfolio',
+    siteName: 'Péter Dobi Portfolio',
     locale: 'en_US',
     type: 'website',
   },

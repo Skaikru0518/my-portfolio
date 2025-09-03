@@ -84,7 +84,7 @@ export default function Hero() {
                 Hi, I&apos;m
               </span>
               <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                Peter Dobi
+                Péter Dobi
               </span>
             </h1>
             <div className="text-xl md:text-2xl lg:text-3xl dark:text-foreground/80 light:text-white/60 font-light">
