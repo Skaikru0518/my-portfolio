@@ -36,4 +36,13 @@ export const project_desc: Projects[] = [
       'https://github.com/Skaikru0518/CryptoCalculator/releases/tag/v1.0.4',
     featured: true,
   },
+  {
+    title: 'Immonolgy API Backend',
+    tags: ['NestJS', 'TypeScript'],
+    description:
+      'A NestJS-based backend application modeling an immunology database.',
+    githubUrl: 'https://github.com/Skaikru0518/immun-api',
+    liveUrl: 'https://immun-api.onrender.com/api#/',
+    featured: true,
+  },
 ];
