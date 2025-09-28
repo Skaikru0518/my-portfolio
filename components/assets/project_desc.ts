@@ -50,8 +50,7 @@ export const project_desc: Projects[] = [
 		tags: ["NextJS", "TypeScript"],
 		description:
 			"A NextJS-based fullstack application modeling a project managementy system, for companies.",
-		githubUrl:
-			"https://github.com/Skaikru0518/project-manager-nextjs/tree/main",
+		githubUrl: "https://github.com/Skaikru0518/project-manager-pub/",
 		liveUrl: "https://project-manager-skaikru.vercel.app/",
 		featured: true,
 	},
